@@ -7,6 +7,7 @@ Kho lưu trữ các phiên bản portfolio theo năm. **Nhánh `main` là mục 
 | [`ver-2024`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2024) | Portfolio phiên bản 2024 |
 | [`ver-2025`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2025) | Portfolio phiên bản 2025 |
 | [`ver-2026`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026) | Portfolio phiên bản 2026 cũ |
+| [baonhantk.github.io](https://baonhantk.github.io/) | Bản deploy GitHub Pages (repo / nhánh riêng) |
 
 ## Preview
 
@@ -21,6 +22,10 @@ Kho lưu trữ các phiên bản portfolio theo năm. **Nhánh `main` là mục 
 ### [ver-2026](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026)
 
 [![Portfolio 2026](./previews/ver-2026.png)](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026)
+
+### [baonhantk.github.io](https://baonhantk.github.io/)
+
+→ [https://baonhantk.github.io/](https://baonhantk.github.io/)
 
 ## Chạy local
 
