@@ -1,12 +1,26 @@
 # Portfolio archives
 
-Kho lưu trữ các phiên bản portfolio theo năm. **Nhánh `main` chỉ là mục lục** — mã nguồn và site chạy trên từng nhánh năm.
+Kho lưu trữ các phiên bản portfolio theo năm. **Nhánh `main` là mục lục** (README + preview) — mã nguồn và site chạy trên từng nhánh năm.
 
 | Nhánh | Mô tả |
 |--------|--------|
 | [`ver-2024`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2024) | Portfolio phiên bản 2024 |
 | [`ver-2025`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2025) | Portfolio phiên bản 2025 |
 | [`ver-2026`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026) | Portfolio phiên bản 2026 (mới nhất) |
+
+## Preview
+
+### [ver-2024](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2024)
+
+[![Portfolio 2024](./previews/ver-2024.png)](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2024)
+
+### [ver-2025](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2025)
+
+[![Portfolio 2025](./previews/ver-2025.png)](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2025)
+
+### [ver-2026](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026)
+
+[![Portfolio 2026](./previews/ver-2026.png)](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026)
 
 ## Chạy local
 
