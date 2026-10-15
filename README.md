@@ -6,7 +6,7 @@ Kho lưu trữ các phiên bản portfolio theo năm. **Nhánh `main` là mục 
 |--------|--------|
 | [`ver-2024`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2024) | Portfolio phiên bản 2024 |
 | [`ver-2025`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2025) | Portfolio phiên bản 2025 |
-| [`ver-2026`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026) | Portfolio phiên bản 2026 (mới nhất) |
+| [`ver-2026`](https://github.com/ngocquynhpham/portfolio-archives/tree/ver-2026) | Portfolio phiên bản 2026 cũ |
 
 ## Preview
 
