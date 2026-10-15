@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary: #0ca16e;
+  --text-primary: #1e293b;
+  --neutral-300: #babcc2;
+  --neutral-700: #494a50;
+  --bg-page: #ffffff;
+  --surface: #ffffff;
+  font-family: Poppins, Inter, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html.theme-subpage body {
+  background-color: #ffffff;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+a {
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--primary);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Landing */
+.landing-bg {
+  background-color: #ffffff;
+}
+
+.landing-page {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.landing-page button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.landing-page button:focus,
+.landing-page button:focus-visible {
+  outline: none;
+}
+
+.landing-page,
+.landing-page nav,
+.landing-page section,
+.landing-page div,
+.landing-page h1,
+.landing-page h2,
+.landing-page h3,
+.landing-page h4,
+.landing-page p,
+.landing-page span:not(.hero-engineer-word):not(.hero-engineer-cursor):not(.hero-engineer-block),
+.landing-page a,
+.landing-page button {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.landing-page .transform,
+.reveal-elem,
+.marquee-content {
+  transition-property: transform, opacity, width !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.lock-scroll {
+  overflow: hidden !important;
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-primary);
+}
+.text-outline:hover {
+  color: var(--primary);
+  -webkit-text-stroke: 1px var(--primary);
+}
+
+/* Hero "Engineer.": typewriter (JS) + cursor blink; when done, hover → green outline */
+.landing-page .hero-engineer-block {
+  white-space: nowrap;
+}
+.landing-page .hero-engineer-word--typing,
+.landing-page .hero-engineer-word--done {
+  color: var(--primary);
+  -webkit-text-stroke-width: 0;
+}
+.landing-page .hero-engineer-word--done {
+  transition:
+    color 0.22s ease,
+    -webkit-text-stroke-color 0.22s ease,
+    -webkit-text-stroke-width 0.22s ease;
+}
+.landing-page .hero-engineer-word--done:hover {
+  color: transparent;
+  -webkit-text-stroke-color: var(--primary);
+  -webkit-text-stroke-width: 1.5px;
+}
+@keyframes hero-engineer-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.landing-page .hero-engineer-cursor {
+  display: inline-block;
+  font-weight: 300;
+  color: var(--primary);
+  margin-left: 0.04em;
+  transform: translateY(-0.02em);
+  animation: hero-engineer-cursor-blink 0.95s step-end infinite;
+}
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.reveal-elem {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.reveal-elem.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-elem,
+  .reveal-elem.active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .marquee-content {
+    animation: none;
+  }
+  .animate-pulse {
+    animation: none;
+  }
+  .landing-page .hero-engineer-word--done {
+    transition: none;
+  }
+  .landing-page .hero-engineer-cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.loader-hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
