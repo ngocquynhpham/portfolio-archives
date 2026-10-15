@@ -1,0 +1,83 @@
+#quynhptn-back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  cursor: url('../../assets/icons/cursor.svg'), auto;
+  @media only screen and (max-width: 576px) {
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 420px) {
+    border: 1px solid var(--primary);
+    border-radius: 100%;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+.quynhptn-stamp {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 90px;
+  height: 90px;
+  font-family: "Krona One", sans-serif;
+  font-size: 8px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  @media only screen and (max-width: 576px) {
+    width: 70px;
+    height: 70px;
+    
+  }
+  @media only screen and (max-width: 420px) {
+    width: 40px;
+    height: 40px;
+  }
+  .quynhptn-m-text {
+    color: var(--primary);
+    position: relative;
+    display: block;
+    height: 100%;
+    animation: rotate-circles 7s linear infinite;
+  }
+  &.quynhptn--init .quynhptn-m-text > * {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 50%;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 2s;
+    transform-origin: bottom center;
+    @media only screen and (max-width: 420px) {
+      display: none;
+    }
+  }
+  .quynhptn-m-centred-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@for $i from 1 through 24 {
+  .quynhptn-m-character:nth-child(#{$i}) {
+    transform: rotate(#{-90 + ($i - 1) * 15}deg) translateZ(0);
+    transition-delay: 0ms;
+  }
+}
+
+@keyframes rotate-circles {
+  100% {
+    transform: rotate(360deg);
+  }
+}

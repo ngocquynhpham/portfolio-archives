@@ -1,0 +1,84 @@
+#header{
+    z-index: 99999;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    position: absolute;
+    inset: 0% 0% auto;
+}
+.memu-open {
+  .header{
+    &__title{
+      &--large{
+        &:first-child {
+          opacity: 0;
+          transition-delay: 200s;
+          transition: all 1000ms cubic-bezier(1, -0.11, 0, 0.92);
+        }
+        &:last-child {
+          opacity: 0;
+          transition: opacity 700ms cubic-bezier(1, -0.01, 0, 0.92);
+        }
+      }
+      
+    }
+  }
+ 
+}
+.is-group{
+  &:hover {
+    .header__title--large {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+}
+
+.itemMenu:hover {
+  .icon-right {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+    path {
+      stroke: var(--primary);
+    }
+  }
+  color: var(--primary);
+}
+.itemMenu,
+.menu,
+.header__title--large {
+  font-family: "Krona One", sans-serif;
+}
+.itemMenu:hover {
+  background: transparent;
+}
+.itemMenu .mantine-NavLink-label {
+  font-size: 45px;
+}
+.menuDrawer .mantine-Drawer-body {
+  margin-top: 70px;
+  height: calc(100dvh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .header__title--large {
+    font-size: 12px;
+  }
+  .itemMenu .mantine-NavLink-label {
+    font-size: 25px;
+  }
+}
